@@ -4,6 +4,7 @@ import { PostWidget, Categories, Author, BlogDetails, Comment, CommentForm } fro
 import { getPostDetails, getPosts } from './../../services/index';
 
 
+
 const Blogs = ({ post }) => {
   return (
     <>

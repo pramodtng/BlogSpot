@@ -2,6 +2,16 @@
 import React from 'react'
 import Image from 'next/image';
 import moment from 'moment/moment';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon
+} from 'next-share';
 
 const BlogDetails = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -72,6 +82,20 @@ const BlogDetails = ({ post }) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
+        </div>
+        <div className='p-2 flex justify-center'>
+          <TwitterShareButton>
+            <TwitterIcon size={34} round url={post.slug} className='m-2' />
+          </TwitterShareButton>
+          <FacebookShareButton>
+            <FacebookIcon size={34} round url={post.slug} className='m-2' />
+          </FacebookShareButton>
+          <LinkedinShareButton>
+            <LinkedinIcon size={34} round url={post.slug} className='m-2' />
+          </LinkedinShareButton>
+          <WhatsappShareButton>
+            <WhatsappIcon size={34} round url={post.slug} className='m-2' />
+          </WhatsappShareButton>
         </div>
       </div>
     </div>
