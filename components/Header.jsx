@@ -11,7 +11,7 @@ const Header = () => {
   });
   return (
     <div>
-      <Wave 
+      <Wave
         fill='#d0ebff'
         paused={false}
         options={{
@@ -21,23 +21,23 @@ const Header = () => {
           points: 5,
           className: 'wave'
         }}
-        />
-        <div className='absolute container mx-auto px-10 mb-4 top-0 left-0'>
+      />
+      <div className='absolute container mx-auto px-10 mb-4 top-0 left-0'>
         <div className='w-full inline-block py-8'>
           <div className='md:float-left hover:block hover:border-b-[2px] hover:border-blue-400 pb-2 hover:text-blue-400'>
-            <Image 
-              src = '/logo.png'
-              alt = 'description'
-              height = {50}
-              width = {80}
-              className = 'cursor-pointer'
+            <p className='text-[24px] text-center'>བཀྲིས་བརྡ་དོན་བརྒྱད་འབྲེལ་ཚད་འཛིན།།</p>
+            <Image
+              src='/logo.png'
+              alt='description'
+              height={50}
+              width={80}
+              className='cursor-pointer'
             />
             <Link href="/">
               <span className='cursor-pointer font-bold text-4xl lg:text-7xl lg:ml-2 lg:tracking-[2px]'>
                 BlogSpot
               </span>
-            </Link> 
-            <p className='ml-12 p-2 text-lg'>Stories from TashiCell</p>
+            </Link>
           </div>
           <div className='hidden md:float-left md:contents lg:float-left'>
             {/* {categories.map(function (category) {
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   )
 }
 
