@@ -5,12 +5,13 @@ import { getPostDetails, getPosts } from './../../services/index';
 
 
 const Blogs = ({ post }) => {
+  console.log(post.slug)
   return (
       <div className='container mx-auto px-10 pb-8'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1 text-white'>
             <BlogDetails post={post} />
-            {/* <Author author={post.author} /> */}
+            <Author author={post.author} />
             <CommentForm slug={post.slug} />
             <Comment slug={post.slug} />
           </div>
@@ -24,8 +25,6 @@ const Blogs = ({ post }) => {
       </div>
   )
 }
-
-
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug)
   return {

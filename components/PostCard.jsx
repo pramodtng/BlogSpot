@@ -10,10 +10,8 @@ const PostCard = ({ post }) => {
         <Image
           src={post.featuredImage.url}
           alt='post-describtion'
-          // height={320}
           layout='fill'
           priority={true}
-          // sizes="(width: 100%;)"
           className='object-top absolute object-cover shadow-lg rounded-t-lg lg:rounded-lg'
         />
       </div>
@@ -33,10 +31,6 @@ const PostCard = ({ post }) => {
           />
           <p className='inline align-middle text-gray-700 ml-2 text-lg'> {post.author.name} </p>
         </div>
-        {/* <div className='flex md:flex justify-center text-gray-700'>
-          <Image src = {'/category.png'} alt = 'category' height={24} width={24}/>
-          <span className='ml-2'> {post.categories.name} </span>
-        </div> */}
         <div className='font-medium text-gray-700'>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
