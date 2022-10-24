@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React from 'react'
 import { PostWidget, Categories, Author, BlogDetails, Comment, CommentForm } from '../../components';
 import { getPostDetails, getPosts } from './../../services/index';
@@ -7,12 +6,6 @@ import { getPostDetails, getPosts } from './../../services/index';
 
 const Blogs = ({ post }) => {
   return (
-    <>
-      <Head>
-        {/* <title>
-          {post.title}
-        </title> */}
-      </Head>
       <div className='container mx-auto px-10 pb-8'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1 text-white'>
@@ -28,7 +21,7 @@ const Blogs = ({ post }) => {
             </div>
           </div>
         </div>
-      </div></>
+      </div>
   )
 }
 
