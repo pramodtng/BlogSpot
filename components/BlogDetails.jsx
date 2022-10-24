@@ -14,6 +14,7 @@ import {
 } from 'next-share';
 
 const BlogDetails = ({ post }) => {
+  console.log(JSON.stringify(post));
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -32,7 +33,9 @@ const BlogDetails = ({ post }) => {
     }
 
     switch (type) {
-      case 'heading-three':
+      case 'heading-1':
+        return <h1 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
+      case 'heading-3':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
@@ -48,6 +51,15 @@ const BlogDetails = ({ post }) => {
             src={obj.src}
           />
         );
+      case 'video':
+        return (
+          <video
+            key={index}
+            autoPlay={obj.autoPlay}
+            controls={true}
+            muted={obj.muted}
+            src={obj.src} />
+        )
       default:
         return modifiedText;
     }
