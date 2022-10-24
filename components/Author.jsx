@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Author = ({ post }) => {
+const Author = ({ author }) => {
   return (
     <div className='text-center mt-20 mb-8 p-10 relative bg-white rounded-lg'>
       <div className='absolute left-0 right-2 -top-8'>

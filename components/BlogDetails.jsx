@@ -14,7 +14,6 @@ import {
 } from 'next-share';
 
 const BlogDetails = ({ post }) => {
-  console.log(JSON.stringify(post));
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
