@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div>
       <Wave
-        fill='#d0ebff'
+        fill='#0b70f9'
         paused={false}
         options={{
           height: 20,
