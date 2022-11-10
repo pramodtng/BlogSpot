@@ -23,9 +23,9 @@ const Header = () => {
         }}
       />
       <div className='absolute container mx-auto px-10 mb-4 top-0 left-0'>
-        <div className='w-full inline-block py-8'>
-          <div className='md:float-left hover:block hover:border-b-[2px] hover:border-blue-400 pb-2 hover:text-blue-400'>
-            <p className='text-[24px] text-center'>བཀྲིས་བརྡ་དོན་བརྒྱད་འབྲེལ་ཚད་འཛིན།།</p>
+        <div className='w-full flex items-center py-8'>
+          <div className='flex items-center md:float-left hover:text-blue-400'>
+            {/* <p className='text-[22px] text-center'>BlogSpot</p> */}
             <Image
               src='/logo.png'
               alt='description'
@@ -34,8 +34,8 @@ const Header = () => {
               className='cursor-pointer'
             />
             <Link href="/">
-              <span className='cursor-pointer font-bold text-4xl lg:text-7xl lg:ml-2 lg:tracking-[2px]'>
-                BlogSpot
+              <span className='cursor-pointer font-bold text-7xl lg:text-4xl lg:ml-2 lg:tracking-[2px]'>
+                བཀྲིས་བརྡ་དོན་བརྒྱད་འབྲེལ་ཚད་འཛིན།།
               </span>
             </Link>
           </div>
